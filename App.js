@@ -29,21 +29,16 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-  const [name, setName] = useState('Hichem');
-  const [session, setSession] = useState({number: 6, title:'state'})
-  const [current, setCurrent] = useState(true)
+  const [counter, setCounter] = useState(0);
   const onClickHandler = () => {
-    setName("Programming with Hichem");
-    setSession({number: 7, title: 'state'});
-    setCurrent(false);
+    setCounter(counter + 1);
   }
 
   return (
     <View style={backgroundStyle}>
-      <Text> Hello {name}</Text>
-      <Text> This is session number {session.number} and about {session.title} </Text>
-      <Text> {current ? 'current session' : 'next session'} </Text>
-      <Button title="Update State" onPress={onClickHandler}></Button>
+      <Text> {counter * 5} </Text>
+      <Button title="Add" onPress={onClickHandler}></Button>
+      <Text> You clicked {counter} times </Text>
     </View>
   );
 };
