@@ -29,36 +29,104 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-  const [counter, setCounter] = useState(0);
-  const onClickHandler = () => {
-    setCounter(counter + 1);
-  }
 
   return (
-    <View style={backgroundStyle}>
-      <Text> {counter * 5} </Text>
-      <Button title="Add" onPress={onClickHandler}></Button>
-      <Text> You clicked {counter} times </Text>
+    <View style={styles.body}>
+      <View style={styles.group1}>
+        <View style={styles.view1}>
+          <Text style={styles.text}> 1 </Text>
+        </View>
+        <View style={styles.view2}>
+          <Text style={styles.text}> 2 </Text>
+        </View>
+        <View style={styles.view3}>
+          <Text style={styles.text}> 3 </Text>
+        </View>
+      </View>
+
+      <View style={styles.view4}>
+        <Text style={styles.text}> 4 </Text>
+      </View>
+
+      <View style={styles.view5}>
+        <Text style={styles.text}> 5 </Text>
+      </View>
+
+      <View style={styles.group4}>
+        <View style={styles.view6}>
+          <Text style={styles.text}> 6 </Text>
+        </View>
+        <View style={styles.view7}>
+          <Text style={styles.text}> 7 </Text>
+        </View>
+      </View>
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  body: {
+    flex:1
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  group1: {
+    backgroundColor: '#ffffff',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+ 
+  view1: {
+    flex:1,
+    backgroundColor: '#00ffff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  highlight: {
-    fontWeight: '700',
+  view2: {
+    flex:2,
+    backgroundColor: '#ff00ff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  view3: {
+    flex:3,
+    backgroundColor: '#ffff00',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  view4: {
+    backgroundColor: '#ff0000',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  view5: {
+    backgroundColor: '#00ff00',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  group4: {
+    flex:1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+  },
+  view6: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+  view7: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#0000ff',
+  },
+  text: {
+    color: '#000000',
+    fontSize: 35,
+    margin: 10,
   },
 });
 
